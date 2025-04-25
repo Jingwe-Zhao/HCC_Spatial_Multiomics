@@ -1,4 +1,4 @@
-###HCC Spatial####
+###HCC Spatial Multiomics####
 library(Matrix, lib.loc = "/public/software/miniconda3/envs/r4.1.3/lib/R/library")
 library(Seurat)
 library(tidyverse)
@@ -20,7 +20,7 @@ samples_dir
 ##slice id
 sample_names <- c("C2", "C4", "C7", "C8", "P2", "P7")
 
-## 依次读取每个样本
+## read samples
 sample_objects <- purrr::map(1:length(sample_list), function(x) {
   ## read data
   one_dir <- samples_dir[x]
@@ -49,7 +49,7 @@ sample_objects <- lapply(sample_objects,
 ST<-merge(sample_objects[[1]], y = sample_objects[2:6])
 DefaultAssay(ST) <- "SCT"
 
-#VariableFeatures去重
+#VariableFeatures duplicate removal
 uniFeature <- unique(unlist(lapply(sample_objects, VariableFeatures)))
 VariableFeatures(ST) <- uniFeature
 
@@ -130,7 +130,7 @@ ggsave(plot = p,filename = "/home/zhaojingwei/DATA/luo/tongji/ST/Mycode/Fig/Fig1
 
 
 ##Fig1 F----
-#细胞比例脚本
+#cellRatio script
 source('/home/zhaojingwei/DATA/code/cellRatioPlot.R')
 cellRatio<-cellRatioPlot(object = ST,
                          sample.name = "orig.ident",
@@ -142,7 +142,7 @@ ggsave("/home/zhaojingwei/DATA/luo/tongji/ST/Mycode/Fig/Fig1/Fig1F_Cluster_Ratio
 
 
 ###Fig1G----
-#载入RCTD结果
+#load RCTD result
 HCC<-readRDS('/home/bioinformatics/Project/zhluo/HCC_wangfubing/HCC_RCTD_SeuratObject.rds')
 
 cell_prop = as.data.frame(HCC@assays[["RCTD"]]@counts) %>% t() %>% 
@@ -328,7 +328,7 @@ dev.off()
 
 
 ###Fig1I----
-#区域定义
+#region defination
 ST@meta.data$Region<-NA
 ST@meta.data$Region[ST@meta.data$cluster %in% c('2','4','9','11')] <- "PT"
 ST@meta.data$Region[ST@meta.data$cluster %in% c('1','6','7','8','10','12','13')] <- "T"
