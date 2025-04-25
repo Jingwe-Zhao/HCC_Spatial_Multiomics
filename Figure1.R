@@ -82,7 +82,7 @@ ggsave(plot = umap,filename = "/home/zhaojingwei/DATA/luo/tongji/ST/Mycode/Fig/F
 
 ##Fig1B----
 list<-c('HAMP','MT1X','MT1G','KIAA1522','IL11RA','CD3D','CD3E','IGHG1','IGHA1','COL1A1','COL1A2','ACTA2','MYH11','SMO','IFI6','TMEM45B','LAMB3','PKLR','SYT7','SLC22A7','SERPINA7','TUBB','GPC3','LGALS4')
-#均值热图脚本
+#AverageHeatmap script
 source('/home/zhaojingwei/DATA/code/AverageHeatmap.R')
 Heatmap<-AverageHeatmap(object = ST,
                group.by = 'clusters',
