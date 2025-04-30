@@ -1,4 +1,4 @@
-######Figure6######
+######Figure6#####
 library(RColorBrewer)
 library(Seurat)
 library(Matrix)
