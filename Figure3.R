@@ -1,6 +1,6 @@
 ####Figure3####
 ##Fig3A----
-load('~/DATA/luo/tongji/HCC_nature/Scissor/Hep_sub_Scisso.rdata')
+load('~/DATA/luo/zhongnan/HCC_nature/Scissor/Hep_sub_Scisso.rdata')
 
 Hep_sub@meta.data$Label3<-'Background'
 Hep_sub@meta.data$Label3[Hep_sub@meta.data$RNA_snn_res.0.4 %in% c('6','7')]<-'Scissor_Pos'
@@ -124,7 +124,7 @@ title(main = 'Classifier of Scissor Pos', line = 2.2, cex.main = 1)
 #wet lab
 
 ##Fig3F----
-df<-read.csv('~/DATA/luo/tongji/bulkRNA/verify/gene_verify.csv',row.names = 1)
+df<-read.csv('~/DATA/luo/zhongnan/bulkRNA/verify/gene_verify.csv',row.names = 1)
 table(df$MVI)
 
 
