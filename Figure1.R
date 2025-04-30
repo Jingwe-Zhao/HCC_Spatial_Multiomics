@@ -332,10 +332,10 @@ dev.off()
 ST@meta.data$Region<-NA
 ST@meta.data$Region[ST@meta.data$cluster %in% c('2','4','9','11')] <- "PT"
 ST@meta.data$Region[ST@meta.data$cluster %in% c('1','6','7','8','10','12','13')] <- "T"
-##C2样本的Cluster4为癌灶
+##C2 Cluster4 tumor
 ST@meta.data$Region[ST@meta.data$cluster %in% c('4') & ST@meta.data$orig.ident %in% c('C2')] <- "T"
 ST@meta.data$Region[ST@meta.data$cluster %in% c('3','5')] <- "TC"
-##C2样本的Cluster7为过渡区TR
+##C2Cluster7 TR
 ST@meta.data$Region[ST@meta.data$cluster %in% c('7')& ST@meta.data$orig.ident %in% c('C7')] <- "TR"
 
 col2<-c('PT'='#FDB462','TC'='#1965B0','T'='#DC050C','TR'='#B17BA6')
