@@ -60,7 +60,7 @@ library(harmony)
 ST <- RunHarmony(ST,reduction = "pca",group.by.vars = "orig.ident",reduction.save = "harmony")
 
 #FindClusters
-ST <- FindNeighbors(ST, reduction = "harmony", dims = 1:20) %>% 
+ST <- FindNeighbors(ST, reduction = "harmony", dims = 1:30) %>% 
   FindClusters(resolution = 0.4)
 ST <- RunUMAP(ST, dims = 1:20, reduction = "harmony")
 
@@ -75,7 +75,7 @@ col = c('1'="#7fc97f", '2'="#beaed4", '3'="#fdc086", '4'="#386cb0", '5'="#f0027f
 
 umap<-DimPlot(ST,cols = col,group.by = 'clusters')+theme_dr(xlength=0.22,ylength=0.22, arrow=grid::arrow(length=unit(0.15,"inches"),type="closed"))+theme(panel.grid=element_blank())
 umap
-ggsave(plot = umap,filename = "/home/zhaojingwei/DATA/luo/tongji/ST/Mycode/Fig/Fig1/Fig1A_ST_UMAP.pdf",width = 4.6,height = 3.8)
+ggsave(plot = umap,filename = "/home/zhaojingwei/DATA/luo/zhongnan/ST/Mycode/Fig/Fig1/Fig1A_ST_UMAP.pdf",width = 4.6,height = 3.8)
 
 
 
@@ -97,7 +97,7 @@ Heatmap<-AverageHeatmap(object = ST,
                myanCol=c("#43acde","#6c67a5","#7fc97f","#a34e3b",
                          "#1b9e77","#666666","#f0027f","#fdc086",
                          "#d01b2a","#efbd25","#d95f02","#386cb0","#beaed4"))
-pdf("/home/zhaojingwei/DATA/luo/tongji/ST/Mycode/Fig/Fig1/Fig1B_Heatmap.pdf", width = 3.9, height = 5.8)
+pdf("/home/zhaojingwei/DATA/luo/zhongnan/ST/Mycode/Fig/Fig1/Fig1B_Heatmap.pdf", width = 3.9, height = 5.8)
 
 Heatmap
 dev.off()
@@ -126,7 +126,7 @@ c6<-SpatialPlot(ST, group.by = 'clusters',stroke = 0.15, pt.size.factor =1.3,ima
 
 p<-ggarrange(h1,c1,h3,c3,h5,c5,h2,c2,h4,c4,h6,c6,ncol = 6,nrow = 2)
 p
-ggsave(plot = p,filename = "/home/zhaojingwei/DATA/luo/tongji/ST/Mycode/Fig/Fig1/Fig1_C-E.pdf",width = 11.8,height = 5.3)
+ggsave(plot = p,filename = "/home/zhaojingwei/DATA/luo/zhongnan/ST/Mycode/Fig/Fig1/Fig1_C-E.pdf",width = 11.8,height = 5.3)
 
 
 ##Fig1 F----
@@ -138,7 +138,7 @@ cellRatio<-cellRatioPlot(object = ST,
                          flow.curve = 0.5,fill.col = col)+
   theme(axis.text.x = element_text(angle = 0,hjust = 0.5))+xlab('Sample')
 cellRatio 
-ggsave("/home/zhaojingwei/DATA/luo/tongji/ST/Mycode/Fig/Fig1/Fig1F_Cluster_Ratio.pdf", plot = cellRatio, width = 7.2, height = 5.1)
+ggsave("/home/zhaojingwei/DATA/luo/zhongnan/ST/Mycode/Fig/Fig1/Fig1F_Cluster_Ratio.pdf", plot = cellRatio, width = 7.2, height = 5.1)
 
 
 ###Fig1G----
@@ -351,10 +351,8 @@ plot_gene = function (cluster){
 Region<-plot_gene(cluster='Region')
 Region
 
-ggsave("/home/zhaojingwei/DATA/luo/tongji/ST/Mycode/Fig/Fig1/Fig1I_Region.pdf", plot = Region, width = 10.8, height = 3)
+ggsave("/home/zhaojingwei/DATA/luo/zhongnan/ST/Mycode/Fig/Fig1/Fig1I_Region.pdf", plot = Region, width = 10.8, height = 3)
 
 
 #save
-saveRDS(ST,file = '/home/zhaojingwei/DATA/luo/tongji/HCC2/HCC6-defined.rds')
-
-
+saveRDS(ST,file = '/home/zhaojingwei/DATA/luo/zhongnan/HCC2/HCC6-defined.rds')
