@@ -135,7 +135,7 @@ ggplot(data = df2,
 
 ##Fig2D----
 #TCGA-LIHC MVI+DEG
-deg<-read.csv('~/DATA/luo/tongji/TCGA/1011/TCGA_LIHC_MVI_DEG.csv')
+deg<-read.csv('~/DATA/luo/zhongnan/TCGA/1011/TCGA_LIHC_MVI_DEG.csv')
 #up-regulated gene
 UP_MVI<-subset(deg,Group %in% 'UP')
 
@@ -181,11 +181,11 @@ library(Scissor)
 
 ##HCC scRNA-seq data(HRA001748)
 library(tidydr)
-load('~/DATA/luo/tongji/HCC_nature/Hep_score.rdata')
+load('~/DATA/luo/zhongnan/HCC_nature/Hep_score.rdata')
 DimPlot(Hep,group.by = 'seurat_clusters',pt.size = 0.05)
 
 ##TCGA-LIHC 
-LIHC<-read.csv('/home/zhaojingwei/DATA/luo/tongji/TCGA/LIHC_TCGA.csv',header = T,row.names = 1)
+LIHC<-read.csv('/home/zhaojingwei/DATA/luo/zhongnan/TCGA/LIHC_TCGA.csv',header = T,row.names = 1)
 table(LIHC$MVI)
 
 #exclude Normal
@@ -319,14 +319,14 @@ ggplot(data = df1,
 
 ##Fig2H----
 #Cluster6,7 DEG
-load( '~/DATA/luo/tongji/HCC_nature/Scissor/DEG/Scissor_deg.rdata')
+load( '~/DATA/luo/zhongnan/HCC_nature/Scissor/DEG/Scissor_deg.rdata')
 table(Scissor_deg2$cluster)
 
 #MVI scRNA-seq UP
-scDEG<-read.csv( '~/DATA/luo/tongji/HCC2/GSE242889/scDEG.csv')
+scDEG<-read.csv( '~/DATA/luo/zhongnan/HCC2/GSE242889/scDEG.csv')
 
 #ST MVI UP
-stDEG<- readRDS("~/DATA/luo/tongji/ST/DEG/ST_MVI+_Tumor_DEG.rds")
+stDEG<- readRDS("~/DATA/luo/zhongnan/ST/DEG/ST_MVI+_Tumor_DEG.rds")
 stDEG$cluster<-'ns'
 stDEG$cluster[stDEG$avg_log2FC >= 0.5 & stDEG$p_val_adj < 0.05 & stDEG$pct.1 >= 0.5]<-'UP'
 stDEG$cluster[stDEG$avg_log2FC <= -0.5 & stDEG$p_val_adj < 0.05 & stDEG$pct.1 >= 0.5]<-'Down'
@@ -335,13 +335,13 @@ table(stDEG$cluster)
 
 ##Fig2I----
 #load TCGA-LIHC MVI DEG
-deg<-read.csv('~/DATA/luo/tongji/TCGA/1011/TCGA_LIHC_MVI_DEG.csv')
+deg<-read.csv('~/DATA/luo/zhongnan/TCGA/1011/TCGA_LIHC_MVI_DEG.csv')
 #subset up-regulated 
 UP_MVI<-subset(deg,Group %in% 'UP')
 
 
 ##Fig2J----
-load( '~/DATA/luo/tongji/HCC_nature/Scissor/DEG/Scissor_deg.rdata')
+load( '~/DATA/luo/zhongnan/HCC_nature/Scissor/DEG/Scissor_deg.rdata')
 table(Scissor_deg2$cluster)
 Pos<-subset(Scissor_deg2, cluster %in% 'Scissor_Pos')
 
