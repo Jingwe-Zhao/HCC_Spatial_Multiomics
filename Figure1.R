@@ -5,7 +5,6 @@ library(tidyverse)
 library(ggpubr)
 library(tidydr)
 
-
 #SpaceRanger-out
 input_data_dir <-"/home/bioinformatics/Data_download/zhaojw/Spatial_data/WFB_HCC/1.SpaceRanger"
 sample_list <- list.files(input_data_dir)
