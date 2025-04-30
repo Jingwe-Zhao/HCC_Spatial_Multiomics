@@ -7,6 +7,7 @@ library(MetaboDiff)
 
 #load MSI-ST-Seurat
 load('/home/zhaojingwei/DATA/luo/zhongnan/ST/ST_MSI_combine.rdata')
+
 #subset sample
 HCC<-subset(MSI,orig.ident %in% c('P1','P2','P3','P4'))
 
