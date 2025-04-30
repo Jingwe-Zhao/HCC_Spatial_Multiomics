@@ -12,7 +12,7 @@ Dia<-Glycer_list[[7]][["diacylglycerol biosynthetic process"]]
 
 ##Fig5A----
 #HCC public scRNA-srq
-load( '~/DATA/luo/tongji/HCC_nature/Scissor/Hep_sub_Scisso.rdata')
+load( '~/DATA/luo/zhongnan/HCC_nature/Scissor/Hep_sub_Scisso.rdata')
 DimPlot(Hep_sub, reduction = 'umap', group.by = 'Scissor', cols = c('grey','royalblue','indianred1'), pt.size = 1.2, order = c('Scissor_Pos','Scissor_Neg'))+ggtitle('Scissor')+ theme(plot.title = element_text(size = 16))
 
 DimPlot(Hep_sub,group.by = 'RNA_snn_res.0.4')
@@ -59,7 +59,7 @@ VlnPlot(stTumor, features = 'Diacylglycerol1', group.by = 'Group', pt.size = 0, 
 
 
 #right
-LIHC<-read.csv('/home/zhaojingwei/DATA/luo/tongji/TCGA/LIHC_TCGA.csv',row.names = 1)
+LIHC<-read.csv('/home/zhaojingwei/DATA/luo/zhongnan/TCGA/LIHC_TCGA.csv',row.names = 1)
 LIHCl1<-subset(LIHC,MVI %in% c('MVI','non_MVI'))
 
 #MVI phenotype
