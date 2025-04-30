@@ -31,7 +31,7 @@ sub_msi<-sub_msi[,c('mz',sel_clus, "label")]  # "Cluster.11","Cluster.12",'Clust
 
 
 #load TC DEM
-load('/home/zhaojingwei/DATA/luo/tongji/SM/Corr/DEM_corr.rdata')
+load('/home/zhaojingwei/DATA/luo/zhongnan/SM/Corr/DEM_corr.rdata')
 ##Set1
 mz1<-colnames(DEM_corr[1:130,1:130])
 ##Set2
