@@ -62,7 +62,7 @@ ST <- RunHarmony(ST,reduction = "pca",group.by.vars = "orig.ident",reduction.sav
 #FindClusters
 ST <- FindNeighbors(ST, reduction = "harmony", dims = 1:30) %>% 
   FindClusters(resolution = 0.4)
-ST <- RunUMAP(ST, dims = 1:20, reduction = "harmony")
+ST <- RunUMAP(ST, dims = 1:30, reduction = "harmony")
 
 #rename Cluster+1
 ST@meta.data$clusters <- as.numeric(as.character(ST@meta.data$SCT_snn_res.0.4)) + 1
