@@ -354,4 +354,4 @@ ggsave("/home/zhaojingwei/DATA/luo/zhongnan/ST/Mycode/Fig/Fig1/Fig1I_Region.pdf"
 
 
 #save
-saveRDS(ST,file = '/home/zhaojingwei/DATA/luo/zhongnan/HCC2/HCC6-defined.rds')
+save(ST,file = '/home/zhaojingwei/DATA/luo/zhongnan/ST/Mycode/data/HCC_region.rdata')
