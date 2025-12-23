@@ -23,6 +23,8 @@
 ### R version 4.1.3 (2022-03-10)
 Platform: x86_64-conda-linux-gnu (64-bit)
 Running under: CentOS Linux 7 (Core)
+### R software version
+Seurat 4.3.0 , SeuratObject_4.1.3 , Matrix_1.5-4.1, spacexr_2.2.1, mistyR_1.10.1  , Scissor_2.0.0, clusterProfiler_4.8.3, GSVA_1.48.3 , ggplot2_3.4.4 , ggpubr_0.6.0  , pheatmap_1.0.12 , infercnv_1.19.1 , GSEABase_1.62.0 ,  patchwork_1.1.3 ,  randomForest_4.7-1.2, Cardinal_3.0.1, survival_3.8-3, MetaboDiff_0.9.3
 
 ## Data access 
 ### Generated in this study
