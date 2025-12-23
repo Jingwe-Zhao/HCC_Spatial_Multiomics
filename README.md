@@ -1,5 +1,5 @@
-# In this project
-## We integrated *spatial transcriptomics*, *spatial metabolomics*, *single-cell transcriptomics* and *bulk RNA-seq* to identify the metabolic-transcriptomic features on tumor foci and tumor capsule in Microvascular Invasion HCC
+## HCC Spatial Multi-omics
+### In this project, we integrated *spatial transcriptomics*, *spatial metabolomics*, *single-cell transcriptomics* and *bulk RNA-seq* data to identify the metabolic-transcriptomic features on tumor foci and tumor capsule in Microvascular Invasion HCC
 
 ## Data access 
 ### Generated in this study
