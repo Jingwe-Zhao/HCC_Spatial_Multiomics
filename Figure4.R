@@ -123,13 +123,13 @@ title(main = 'Classifier of Scissor Pos', line = 2.2, cex.main = 1)
 
 
 
-##Fig3C----
+##Fig4C----
 #load HRA000437 scRNA data
 load('~/DATA/luo/zhongnan/HCC_nature/Hep_score.rdata')
 FeaturePlot(HRA000437,features = 'GPC3',reduction = 'umap')
 
 
-##Fig3F----
+##Fig4F----
 df<-read.csv('~/DATA/luo/zhongnan/bulkRNA/verify/gene_verify.csv',row.names = 1)
 table(df$MVI)
 
@@ -215,5 +215,6 @@ p3<-ggplot(df, aes(x = MVI, y = HMGN2, fill = MVI)) +
   stat_compare_means(comparisons = my_comparisons, label = 'p.label', size = 8, paired = F,label.y = 66,method='t.test') +
   theme(legend.position = "none")+ theme(text = element_text(size = 24)) 
 ggarrange(p1,p2,p3,ncol = 3)
+
 
 
