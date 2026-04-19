@@ -12,14 +12,14 @@
 
 #### :pencil:Figure3: Integrated Multi-omics analysis
 - [ ] DEGs,  Marker gene expression, KEGG pathway enrichment, Spatial gene expression scoring , Phenotypic association analysis, Unsupervised clustering,  Comparison of DEGs
-#### :pencil:Figure4: Clinical relevance analysis
+#### :pencil:Figure4: MVI associatecd analysis
+- [ ] Pathway activity analysis, AFP-MVI correlation analysis, Clinical stage analysis, Treatment response analysis
+#### :pencil:Figure5: Clinical relevance analysis
 - [ ] Marker gene expression, Random Forest model, Clinical indicator distribution, Cell subtype proportion, Disease-free survival (DFS) and overall survival (OS) analysis
-#### :pencil:Figure5: Metabolic reprogramming analysis
+#### :pencil:Figure6: Metabolic reprogramming analysis
 - [ ] Metabolic Score, Spatial distribution of metabolic scoring, Spatial expression of enzyme genes, Spatial intensity mapping of metabolites, Overall survival (OS) analysis
-#### :pencil:Figure6: Spatial microenvironment analysis
-- [ ] Identification of tumor capsule and tumor boundary, RCTD cell type deconvolution,  KEGG pathway enrichment, Cancer-associated fibroblast (CAF) subtype scoring, Overall survival (OS) analysis,  Spatial distribution of CAF subtypes, Correlation between CAF subtypes and distance
-#### :pencil:Figure7: CAF subtypes specific metabolite analysis
-- [ ] Differentially Expressed Metabolites(DEMs), Metabolites correlation, KEGG pathway enrichment, CAF-Metabolites correlation, iCAF-Taurine correlation
+#### :pencil:Figure7: Spatial microenvironment analysis
+- [ ] Identification of tumor capsule and  boundary, Cell type deconvolution,  KEGG enrichment, CAF subtype scoring, Overall survival (OS) analysis
 
 ## SessionInfo
 ### R version 4.1.3 (2022-03-10)
