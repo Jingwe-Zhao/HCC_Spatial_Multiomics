@@ -12,7 +12,7 @@
 
 #### :pencil:Figure3: Integrated Multi-omics analysis
 - [ ] DEGs,  Marker gene expression, KEGG pathway enrichment, Spatial gene expression scoring , Phenotypic association analysis, Unsupervised clustering,  Comparison of DEGs
-#### :pencil:Figure4: MVI associatecd analysis
+#### :pencil:Figure4: MVI associated analysis
 - [ ] Pathway activity analysis, AFP-MVI correlation analysis, Clinical stage analysis, Treatment response analysis
 #### :pencil:Figure5: Clinical relevance analysis
 - [ ] Marker gene expression, Random Forest model, Clinical indicator distribution, Cell subtype proportion, Disease-free survival (DFS) and overall survival (OS) analysis
